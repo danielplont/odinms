@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="2201001.img">
+	<imgdir name="info">
+		<string name="info" value="&amp;#52264;&amp;#50896;&amp;#51032; &amp;#48660;&amp;#47197;&amp;#54140;&amp;#49828;&amp;#47484; &amp;#49548;&amp;#54872;&amp;#54620;&amp;#45796;."/>
+		<string name="link" value="2202002"/>
+	</imgdir>
+	<string name="action" value="ludiMob1"/>
+</imgdir>

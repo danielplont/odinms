@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="9202008.img">
+	<imgdir name="info">
+		<string name="info" value="&amp;#49380;&amp;#47116;3&amp;#49464;&amp;#51032; &amp;#50773;&amp;#44288; &amp;#49345;&amp;#51088;"/>
+		<string name="link" value="9202005"/>
+	</imgdir>
+	<string name="action" value="syarenItem8"/>
+</imgdir>
