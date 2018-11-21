@@ -330,7 +330,7 @@ public class MapleClient {
 		Connection con = DatabaseConnection.getConnection();
 		try {
 			PreparedStatement ps = con
-				.prepareStatement("SELECT id,password,salt,tempban,banned,gm,macs,greason FROM accounts WHERE name = ?");
+					.prepareStatement("SELECT id,password,salt,tempban,banned,gm,macs,lastknownip,greason FROM accounts WHERE name = ?");
 			ps.setString(1, login);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
@@ -345,10 +345,19 @@ public class MapleClient {
 				if ((banned == 0 && !ipMacBanned) || banned == -1) {
 					PreparedStatement ips = con.prepareStatement("INSERT INTO iplog (accountid, ip) VALUES (?, ?)");
 					ips.setInt(1, accId);
-					String sockAddr = session.getRemoteAddress().toString();
-					ips.setString(2, sockAddr.substring(1, sockAddr.lastIndexOf(':')));
+					ips.setString(2, session.getRemoteAddress().toString());
 					ips.executeUpdate();
 					ips.close();
+				}
+
+				//update the lastknownip for the player on a successful login if the ip changes
+				if (!rs.getString("lastknownip").equals(session.getRemoteAddress().toString())) {
+					PreparedStatement lkip = con.prepareStatement("UPDATE accounts SET lastknownip = ? where id = ?");
+					String sockAddr = session.getRemoteAddress().toString();
+					lkip.setString(1, sockAddr.substring(1, sockAddr.lastIndexOf(':')));
+					lkip.setInt(2, accId);
+					lkip.executeUpdate();
+					lkip.close();
 				}
 
 				// do NOT track ALL mac addresses ever used
@@ -371,8 +380,7 @@ public class MapleClient {
 					// will be deleted
 					if (banned == -1)
 						unban();
-					if (getLoginState() > MapleClient.LOGIN_NOTLOGGEDIN) { // already
-																			// loggedin
+					if (getLoginState() > MapleClient.LOGIN_NOTLOGGEDIN) { // already loggedin
 						loggedIn = false;
 						loginok = 7;
 					} else {

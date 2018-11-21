@@ -29,6 +29,7 @@ import net.sf.odinms.tools.MaplePacketCreator;
 import net.sf.odinms.tools.data.input.SeekableLittleEndianAccessor;
 import net.sf.odinms.tools.KoreanDateUtil;
 import java.util.Calendar;
+import net.sf.odinms.client.AutoRegister;
 
 public class LoginPasswordHandler implements MaplePacketHandler {
 	// private static Logger log = LoggerFactory.getLogger(LoginPasswordHandler.class);
@@ -48,7 +49,14 @@ public class LoginPasswordHandler implements MaplePacketHandler {
 		int loginok = 0;
 		boolean ipBan = c.hasBannedIP();
 		boolean macBan = c.hasBannedMac();
-		loginok = c.login(login, pwd, ipBan || macBan);
+		if (AutoRegister.getAccountExists(login) != false) {
+			loginok = c.login(login, pwd, ipBan || macBan);
+		} else if (AutoRegister.autoRegister != false && (!ipBan || !macBan)) {
+			AutoRegister.createAccount(login, pwd, c.getSession().getRemoteAddress().toString());
+			if (AutoRegister.success != false) {
+				loginok = c.login(login, pwd, ipBan || macBan);
+			}
+		}
 		Calendar tempbannedTill = c.getTempBanCalendar();
 		if (loginok == 0 && (ipBan || macBan)) {
 			loginok = 3;

@@ -48,7 +48,7 @@ public class LoginCrypto {
 		
 	}
 
-	private static String hexSha1(String in) {
+	public static String hexSha1(String in) {
 		return hashWithDigest(in, "SHA-1");
 	}
 	
