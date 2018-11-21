@@ -1,26 +1,6 @@
-/*
-	This file is part of the OdinMS Maple Story Server
-    Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc> 
-                       Matthias Butz <matze@odinms.de>
-                       Jan Christian Meyer <vimes@odinms.de>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License version 3
-    as published by the Free Software Foundation. You may not use, modify
-    or distribute this program under any other version of the
-    GNU Affero General Public License.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 package net.sf.odinms.net.login.handler;
 
+import net.sf.odinms.client.AutoRegister;
 import net.sf.odinms.client.MapleCharacter;
 import net.sf.odinms.client.MapleClient;
 import net.sf.odinms.net.MaplePacketHandler;
@@ -29,7 +9,6 @@ import net.sf.odinms.tools.MaplePacketCreator;
 import net.sf.odinms.tools.data.input.SeekableLittleEndianAccessor;
 import net.sf.odinms.tools.KoreanDateUtil;
 import java.util.Calendar;
-import net.sf.odinms.client.AutoRegister;
 
 public class LoginPasswordHandler implements MaplePacketHandler {
 	// private static Logger log = LoggerFactory.getLogger(LoginPasswordHandler.class);
@@ -49,16 +28,16 @@ public class LoginPasswordHandler implements MaplePacketHandler {
 		int loginok = 0;
 		boolean ipBan = c.hasBannedIP();
 		boolean macBan = c.hasBannedMac();
-		if (AutoRegister.getAccountExists(login) != false) {
+		if (AutoRegister.getAccountExists(login)) {
 			loginok = c.login(login, pwd, ipBan || macBan);
-		} else if (AutoRegister.autoRegister != false && (!ipBan || !macBan)) {
+		} else if (AutoRegister.autoRegister && (!ipBan || !macBan)) {
 			AutoRegister.createAccount(login, pwd, c.getSession().getRemoteAddress().toString());
-			if (AutoRegister.success != false) {
+			if (AutoRegister.success) {
 				loginok = c.login(login, pwd, ipBan || macBan);
 			}
 		}
 		Calendar tempbannedTill = c.getTempBanCalendar();
-		if (loginok == 0 && (ipBan || macBan)) {
+		if (loginok == 0 && (ipBan || macBan) && !c.isGm()) {
 			loginok = 3;
 
 			if (macBan) {
