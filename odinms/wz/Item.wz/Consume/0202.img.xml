@@ -2812,9 +2812,11 @@
 		<imgdir name="spec">
 			<int name="hpR" value="90"/>
 			<int name="mpR" value="90"/>
-			<int name="pad" value="100"/>
-			<int name="mad" value="100"/>
+			<int name="pad" value="25"/>
+			<int name="mad" value="25"/>
 			<int name="pdd" value="20"/>
+			<int name="speed" value="30"/>
+			<int name="jump" value="14"/>
 			<int name="time" value="600000"/>
 		</imgdir>
 	</imgdir>

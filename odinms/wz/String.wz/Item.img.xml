@@ -2546,7 +2546,7 @@
 		</imgdir>
 		<imgdir name="2022179">
 			<string name="name" value="Onyx Apple"/>
-			<string name="desc" value="A rare, ripe apple imbued with power. Recovers 90% HP &amp; MP, and provides +100 W.Att, +100 M.Att, +20 Def for 10 minutes. "/>
+			<string name="desc" value="A rare, ripe apple imbued with power. Recovers 90% HP &amp; MP, and provides +25 W.Att, +25 M.Att, +20 Def, +30 Speed, +14 Jump for 10 minutes. "/>
 		</imgdir>
 		<imgdir name="2022180">
 			<string name="name" value="Amorian Rice Cookie"/>
