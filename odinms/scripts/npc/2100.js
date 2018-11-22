@@ -39,8 +39,10 @@ function action(mode, type, selection) {
 		cm.gainItem(1051017, 1);
 		cm.gainItem(2000005, 5000);
 		cm.gainItem(1122001, 1);
-        cm.warp(100000000, 0);
         cm.gainMeso(15000000);
+        cm.warp(100000000, 0);
+	} else {
+		wui = 1;
 		var statup = new java.util.ArrayList();
 		var p = cm.c.getPlayer();
 		var totAp = p.getRemainingAp() + p.getStr() + p.getDex() + p.getInt() + p.getLuk();
