@@ -30,7 +30,7 @@ import net.sf.odinms.database.DatabaseConnection;
 
 public class AutoRegister {
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(MapleClient.class);
-    private static final int ACCOUNTS_PER_IP = 1; //change the value to the amount of accounts you want allowed for each ip
+    private static final int ACCOUNTS_PER_IP = 10; //change the value to the amount of accounts you want allowed for each ip
     public static final boolean autoRegister = true; //enable = true or disable = false
 
     public static boolean success = false; // DONT CHANGE
