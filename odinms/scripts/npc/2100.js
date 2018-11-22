@@ -27,7 +27,7 @@
 var wui = 0;
 
 function start() {
-	cm.sendOk ("Hello and welcome to sweetms, here is a good starter pack, your stats will be 10 stats, plus 20 ap, and finally you will be given a gm hat and 10m. Here You Go. Enjoy!");
+	cm.sendOk ("Welcome to the test server, you will be teleported to Henesys and given a few items to start out. Cody does job advancements. Fairy vendors are located in the main towns selling weapons/armor along with other customer vendors.");
 }
 
 function action(mode, type, selection) {
@@ -35,16 +35,12 @@ function action(mode, type, selection) {
 		cm.dispose();
 		cm.gainItem(1082149, 1);
 		cm.gainItem(2040807, 7);
-		cm.gainItem(1002357, 1);
 		cm.gainItem(1050018, 1);
 		cm.gainItem(1051017, 1);
 		cm.gainItem(2000005, 5000);
 		cm.gainItem(1122001, 1);
-		cm.gainItem(1702154, 1);
-                cm.gainItem(1002140, 1);
-                cm.warp(100000000, 0);
-	} else {
-		wui = 1;
+        cm.warp(100000000, 0);
+        cm.gainMeso(15000000);
 		var statup = new java.util.ArrayList();
 		var p = cm.c.getPlayer();
 		var totAp = p.getRemainingAp() + p.getStr() + p.getDex() + p.getInt() + p.getLuk();
@@ -60,6 +56,6 @@ function action(mode, type, selection) {
 		statup.add (new net.sf.odinms.tools.Pair(net.sf.odinms.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(p.getRemainingAp())));
 
 		p.getClient().getSession().write (net.sf.odinms.tools.MaplePacketCreator.updatePlayerStats(statup));
-		cm.sendOk ("Ok, the training begin !");
+		cm.sendOk ("Goodbye!");
 	}
 }
