@@ -27,7 +27,7 @@
 var wui = 0;
 
 function start() {
-	cm.sendOk ("Welcome to the test server, you will be teleported to Henesys and given a few items to start out. Cody does job advancements. Fairy vendors are located in the main towns selling weapons/armor along with other customer vendors.");
+	cm.sendOk ("Welcome to the test server, you will be teleported to Henesys and given a few items to start out. Cody does second & third job advancements. Fairy vendors are located in the main towns selling weapons/armor along with other customer vendors.");
 }
 
 function action(mode, type, selection) {

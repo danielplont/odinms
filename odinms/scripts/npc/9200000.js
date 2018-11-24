@@ -13,507 +13,289 @@ function start()
     action(1, 0, 0);
 }
 
-function action(mode, type, selection) 
+function action(mode, type, selection)
 {
-    if (mode == -1) 
+    if (mode == -1)
     {
         cm.dispose();
-    } 
-    else 
+    }
+    else
     {
         if (mode == 1)
         {
             status++;
         }
-        else 
+        else
         {
             status--;
         }
-        if (status == 0) 
+        if (status == 0)
         {
-            if (cm.getLevel() < 30) 
+            if (cm.getLevel() < 30)
             {
                 status = 98;
                 cm.sendNext("Sorry, but you have to be at least level 30 to get a 2nd job advance.");
             	cm.dispose();
-	     }
+	        }
             else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.WARRIOR)
                 || cm.getJob().equals(net.sf.odinms.client.MapleJob.MAGICIAN)
                 ||cm.getJob().equals(net.sf.odinms.client.MapleJob.BOWMAN)
                 ||cm.getJob().equals(net.sf.odinms.client.MapleJob.THIEF))
             {
-                cm.sendNext("Hello #b#h ##k, I'm in charge of Job Advancing of #bSeanPack#k.");
+                cm.sendNext("Hello #b#h ##k, I'm in charge of Job Advancing of #bodinms#k.");
 
-		}
-            else if (cm.getLevel() >= 30 && cm.getLevel() < 70) 
+		    }
+            else if (cm.getLevel() >= 30 && cm.getLevel() < 70)
             {
-                if (cm.getJob().equals(net.sf.odinms.client.MapleJob.ASSASSIN) || cm.getJob().equals(net.sf.odinms.client.MapleJob.BANDIT) 
+                if (cm.getJob().equals(net.sf.odinms.client.MapleJob.ASSASSIN)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.BANDIT)
                     || cm.getJob().equals(net.sf.odinms.client.MapleJob.HUNTER)
-                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.CROSSBOWMAN) 
-                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.PAGE) || cm.getJob().equals(net.sf.odinms.client.MapleJob.FIGHTER)|| cm.getJob().equals(net.sf.odinms.client.MapleJob.SPEARMAN)
-                    ||cm.getJob().equals(net.sf.odinms.client.MapleJob.CLERIC)|| cm.getJob().equals(net.sf.odinms.client.MapleJob. FP_WIZARD) || cm.getJob().equals(net.sf.odinms.client.MapleJob. IL_WIZARD))
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.CROSSBOWMAN)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.PAGE)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.FIGHTER)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.SPEARMAN)
+                    ||cm.getJob().equals(net.sf.odinms.client.MapleJob.CLERIC)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob. FP_WIZARD)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob. IL_WIZARD))
                 {
                     cm.sendOk("Hello, I'm sorry but you need to be lvl70 for your next job advance");
                     cm.dispose();
                 }
-                else 
+                else
                 {
                     cm.sendNext("Hello #b#h ##k, I'm Cody and I'm in charge of Job Advancing of #bOurMs#k.");
-}            
-}
-            else if (cm.getLevel() >= 70 && cm.getLevel() < 120) 
-            {
-               if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HERMIT) || cm.getJob().equals(net.sf.odinms.client.MapleJob.CHIEFBANDIT) 
-                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.RANGER)
-                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.SNIPER) 
-                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.WHITEKNIGHT) || cm.getJob().equals(net.sf.odinms.client.MapleJob.CRUSADER)|| cm.getJob().equals(net.sf.odinms.client.MapleJob.DRAGONKNIGHT)
-                    ||cm.getJob().equals(net.sf.odinms.client.MapleJob.PRIEST)|| cm.getJob().equals(net.sf.odinms.client.MapleJob. FP_MAGE) || cm.getJob().equals(net.sf.odinms.client.MapleJob. IL_MAGE))   
-                {
-                    cm.sendOk("Hello, I'm sorry but you need to be lvl120 for your next job advance");
-                    cm.dispose();
                 }
-              
-                else 
-                {
+            }
+            else if (cm.getLevel() >= 70)
+            {
+               if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HERMIT)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.CHIEFBANDIT)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.RANGER)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.SNIPER)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.WHITEKNIGHT)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.CRUSADER)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.DRAGONKNIGHT)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.PRIEST)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob. FP_MAGE)
+                    || cm.getJob().equals(net.sf.odinms.client.MapleJob. IL_MAGE))
+               {
+                    cm.sendOk("Hello #b#h ##k, \r\n#dYou are already at the highest job in this version of MapleStory.");
+                    cm.dispose();
+               }
+               else
+               {
                     status = 60;
                     cm.sendNext("Hello #b#h ##k, I'm Cody and I'm in charge of Job Advancing of #bOurMs#k.");
-		}
-                            
-            } 
-            else if (cm.getLevel() >=120) 
-            {
-                if (cm.getJob().equals(net.sf.odinms.client.MapleJob.NIGHTLORD) || cm.getJob().equals(net.sf.odinms.client.MapleJob.SHADOWER) 
-                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.BOWMASTER)
-                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.CROSSBOWMASTER) 
-                    || cm.getJob().equals(net.sf.odinms.client.MapleJob.PALADIN) || cm.getJob().equals(net.sf.odinms.client.MapleJob.HERO)|| cm.getJob().equals(net.sf.odinms.client.MapleJob.DARKKNIGHT)
-                    ||cm.getJob().equals(net.sf.odinms.client.MapleJob.BISHOP)|| cm.getJob().equals(net.sf.odinms.client.MapleJob. FP_ARCHMAGE) || cm.getJob().equals(net.sf.odinms.client.MapleJob. IL_ARCHMAGE))
-                {
-                    cm.sendOk("Hello #b#h ##k, \r\n#dYou are already at the highest job of MapleStory. Go test you're 4th job skills out instead or hunt some strong bosses.#k");
-                    cm.dispose();
-                }
-                else 
-                {
-                    status = 101;
-                    cm.sendNext("Hello #b#h ##k, I'm Cody and I'm in charge of Job Advancing on #bOurMs#k.");    
-		}
+               }
             }
         }
-        else if (status == 1) 
+        else if (status == 1)
         {
-            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.THIEF)) 
+            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.THIEF))
             {
                 cm.sendSimple("Congrats on reaching level 30! Which would you like to be? #b\r\n#L0#Assassin#l\r\n#L1#Bandit#l#k");
             }
-            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.WARRIOR)) 
+            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.WARRIOR))
             {
                 cm.sendSimple("Congrats on reaching level 30! Which would you like to be? #b\r\n#L2#Fighter#l\r\n#L3#Page#l\r\n#L4#Spearman#l#k");
             }
-            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.MAGICIAN)) 
+            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.MAGICIAN))
             {
                 cm.sendSimple("Congrats on reaching level 30! Which would you like to be? #b\r\n#L5#Ice Lightning Wizard#l\r\n#L6#Fire Poison Wizard#l\r\n#L7#Cleric#l#k");
             }
-            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BOWMAN)) 
+            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BOWMAN))
             {
                 cm.sendSimple("Congrats on reaching level 30! Which would you like to be? #b\r\n#L8#Hunter#l\r\n#L9#Crossbowman#l#k");
             }
-            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER)) 
+            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER))
             {
                 cm.sendNext("Congrats on reaching level 30! However, you must've already undergone the First Job Advancement before you can use my services.");
                 cm.dispose();
             }
-        } 
-        else if (status == 2) 
+        }
+        else if (status == 2)
         {
             var jobName;
-            if (selection == 0) 
+            if (selection == 0)
             {
                 jobName = "Assassin";
                 job = net.sf.odinms.client.MapleJob.ASSASSIN;
             }
-            if (selection == 1) 
+            if (selection == 1)
             {
                 jobName = "Bandit";
                 job = net.sf.odinms.client.MapleJob.BANDIT;
             }
-            if (selection == 2) 
+            if (selection == 2)
             {
                 jobName = "Fighter";
                 job = net.sf.odinms.client.MapleJob.FIGHTER;
             }
-            if (selection == 3) 
+            if (selection == 3)
             {
                 jobName = "Page";
                 job = net.sf.odinms.client.MapleJob.PAGE;
             }
-            if (selection == 4) 
+            if (selection == 4)
             {
                 jobName = "Spearman";
                 job = net.sf.odinms.client.MapleJob.SPEARMAN;
             }
-            if (selection == 5) 
+            if (selection == 5)
             {
                 jobName = "Ice Lightning Wizard";
                 job = net.sf.odinms.client.MapleJob.IL_WIZARD;
             }
-            if (selection == 6) 
+            if (selection == 6)
             {
                 jobName = "Fire Poison Wizard";
                 job = net.sf.odinms.client.MapleJob.FP_WIZARD;
             }
-            if (selection == 7) 
+            if (selection == 7)
             {
                 jobName = "Cleric";
                 job = net.sf.odinms.client.MapleJob.CLERIC;
             }
-            if (selection == 8) 
+            if (selection == 8)
             {
                 jobName = "Hunter";
                 job = net.sf.odinms.client.MapleJob.HUNTER;
             }
-            if (selection == 9) 
+            if (selection == 9)
             {
                 jobName = "Crossbowman";
                 job = net.sf.odinms.client.MapleJob.CROSSBOWMAN;
             }
             cm.sendYesNo("Do you want to become a #r" + jobName + "#k?");
-        } 
-        else if (status == 3) 
+        }
+        else if (status == 3)
         {
             cm.changeJob(job);
             cm.sendOk("You have successfully taken you're job advancement. Hope to see you again in the future.");
             cm.dispose();
-        } 
-        else if (status == 61) 
+        }
+        else if (status == 61)
         {
-            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.ASSASSIN)) 
+            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.ASSASSIN))
             {
                 status = 63;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a Hermit?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BANDIT)) 
+            }
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BANDIT))
             {
                 status = 66;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a Chief Bandit?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HUNTER)) 
+            }
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HUNTER))
             {
                 status = 69;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a Ranger?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CROSSBOWMAN)) 
+            }
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CROSSBOWMAN))
             {
                 status = 72;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a Sniper?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FP_WIZARD)) 
+            }
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FP_WIZARD))
             {
                 status = 75;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a F/P Mage?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.IL_WIZARD)) 
+            }
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.IL_WIZARD))
             {
                 status = 78;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a I/L Mage?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CLERIC)) 
+            }
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CLERIC))
             {
                 status = 81;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a Priest?");
             }
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FIGHTER)) 
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FIGHTER))
             {
                 status = 84;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a Crusader?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.PAGE)) 
+            }
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.PAGE))
             {
                 status = 87;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a White Knight?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.SPEARMAN)) 
+            }
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.SPEARMAN))
             {
                 status = 90;
                 cm.sendYesNo("Congrats on reaching level 70 #b#h ##k! Do you want to advance to a Dragon Knight?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER)) 
+            }
+            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER))
             {
                 cm.sendNext("Such a high level #bBeginner#k #b#h ##k! Amazing! You must love being a SuperBeginner.");
             }
-        } 
-        else if (status == 64) 
+        }
+        else if (status == 64)
         {
             cm.changeJob(MapleJob.HERMIT);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
-        } 
-        else if (status == 67) 
+        }
+        else if (status == 67)
         {
             cm.changeJob(MapleJob.CHIEFBANDIT);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
-        } 
-        else if (status == 70) 
+        }
+        else if (status == 70)
         {
             cm.changeJob(MapleJob.RANGER);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
-        } 
-        else if (status == 73) 
+        }
+        else if (status == 73)
         {
             cm.changeJob(MapleJob.SNIPER);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
-        } 
-        else if (status == 76) 
+        }
+        else if (status == 76)
         {
             cm.changeJob(MapleJob.FP_MAGE);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
-        } 
-        else if (status == 79) 
+        }
+        else if (status == 79)
         {
             cm.changeJob(MapleJob.IL_MAGE);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
-        } 
-        else if (status == 82) 
+        }
+        else if (status == 82)
         {
             cm.changeJob(MapleJob.PRIEST);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
-        } 
-        else if (status == 85) 
+        }
+        else if (status == 85)
         {
             cm.changeJob(MapleJob.CRUSADER);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
         }
-        else if (status == 88) 
+        else if (status == 88)
         {
             cm.changeJob(MapleJob.WHITEKNIGHT);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
-        } 
-        else if (status == 91) 
+        }
+        else if (status == 91)
         {
             cm.changeJob(MapleJob.DRAGONKNIGHT);
             cm.sendOk("You have successfully taken your 3rd job advance.");
             cm.dispose();
-        } 
-        else if (status == 99) 
+        }
+        else if (status == 99)
         {
             cm.sendOk("Good luck on your training.");
             cm.dispose();
-        } 
-        else if (status == 102) 
-        {
-            if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HERMIT)) 
-            {
-                status = 105;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to a Nightlord now?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CHIEFBANDIT)) 
-            {
-                status = 108;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to a Shadower now?");
-            }
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.RANGER)) 
-            {
-                status = 111;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to a Bowmaster now?");
-            }
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.SNIPER)) 
-            {
-                status = 114;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to a MarksMan now?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FP_MAGE)) 
-            {
-                status = 117;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to a F/P Archmage now?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.IL_MAGE)) 
-            {
-                status = 120;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to an I/L Archmage now?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.PRIEST)) 
-            {
-                status = 123;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to a Bishop now?");
-            }
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CRUSADER)) 
-            {
-                status = 126;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to a Hero now?");
-            }
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.WHITEKNIGHT)) 
-            {
-                status = 129;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to a Paladin now?");
-            }
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.DRAGONKNIGHT)) 
-            {
-                status = 132;
-                cm.sendYesNo("Congrats on reaching level 120 #g#h ##k Do you want to advance to a Dark Knight now?");
-            } 
-            else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER)) 
-            {
-                cm.sendNext("Such a high level #bBeginner#k #g#h ##k Amazing! You must love being a SuperBeginner.");
-                cm.dispose();
-            }
-        }
-        else if (status == 106) 
-        {
-            cm.changeJob(MapleJob.NIGHTLORD);
-            cm.teachSkill(4121000,0,6);//Maple Warrior
-            cm.teachSkill(4121003,0,6);//Taunt
-            cm.teachSkill(4121004,0,6);// Ninja Ambush
-            cm.teachSkill(4120005,0,6);//Venomous Star
-            cm.teachSkill(4121006,0,6);//Shadow Claw
-            cm.teachSkill(4121007,0,6);//Triple Throw
-            cm.teachSkill(4121008,0,6);//Ninja Storm
-            cm.teachSkill(4121009,0,1);//Hero's Will
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
-        } 
-        else if (status == 109)
-        {
-            cm.changeJob(MapleJob.SHADOWER);
-            cm.teachSkill(4221000,0,6);//Maple Warrior
-            cm.teachSkill(4221001,0,6);//Assassinate
-            cm.teachSkill(4221003,0,6);//Taunt
-            cm.teachSkill(4221004,0,6);//Ninja Ambush
-            cm.teachSkill(4220005,0,6);//Venomous Stab
-            cm.teachSkill(4221006,0,6);//SmokeScreen
-            cm.teachSkill(4221007,0,6);//Boomerang Step
-            cm.teachSkill(4221008,0,1);  //Hero's Will
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
-        } 
-        else if (status == 112) 
-        {
-            cm.changeJob(MapleJob.BOWMASTER);
-            cm.teachSkill(3121000,0,6);//Maple Warrior
-            cm.teachSkill(3121002,0,6);//Sharp Eyes
-            cm.teachSkill(3121003,0,6);//Dragon's Breath
-            cm.teachSkill(3121004,0,6);//Hurricane
-            cm.teachSkill(3120005,0,6);//Bow Expert
-            cm.teachSkill(3121006,0,6);//Pheonix
-            cm.teachSkill(3121007,0,6);//HamString
-            cm.teachSkill(3121008,0,6);//Concentrate
-            cm.teachSkill(3121009,0,1);  //Hero's Will
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
-        } 
-        else if (status == 115) 
-        {
-            cm.changeJob(MapleJob.CROSSBOWMASTER);
-            cm.teachSkill(3221000,0,6);//Maple Warrior
-            cm.teachSkill(3221001,0,6);//Piercing Arrow
-            cm.teachSkill(3221002,0,6);//Sharp Eyes
-            cm.teachSkill(3221003,0,6);//Dragon's Breath
-            cm.teachSkill(3220004,0,6);//Marksman Boost
-            cm.teachSkill(3221005,0,6);//Frostprey
-            cm.teachSkill(3221006,0,6);//Blind
-            cm.teachSkill(3221008,0,1);  //Hero's Will
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
-        } 
-        else if (status == 118)
-        {
-            cm.changeJob(MapleJob.FP_ARCHMAGE);
-            cm.teachSkill(2121000,0,6);//Maple Warrior
-            cm.teachSkill(2121001,0,6);//Big Bang
-            cm.teachSkill(2121002,0,6);//Mana Reflection
-            cm.teachSkill(2121003,0,6);//Fire Demon
-            cm.teachSkill(2121004,0,0);//Infinity
-            cm.teachSkill(2121005,0,6);//Elquines
-            cm.teachSkill(2121006,0,6);//Paralyze
-            cm.teachSkill(2121007,0,6);//Meteor Shower
-            cm.teachSkill(2121008,0,1);  //Hero's Will
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
-        }
-        else if(status == 121) 
-        {
-            cm.changeJob(MapleJob.IL_ARCHMAGE);
-            cm.teachSkill(2221000,0,6);//Maple Warrior
-            cm.teachSkill(2221001,0,6);//Big Bang
-            cm.teachSkill(2221002,0,6);//Mana Reflection
-            cm.teachSkill(2221003,0,6);//Ice Demon
-            cm.teachSkill(2221004,0,0);//Infinity
-            cm.teachSkill(2221005,0,6);//Ifrit
-            cm.teachSkill(2221006,0,6);//Chain Lightning
-            cm.teachSkill(2221007,0,6);//Blizard
-            cm.teachSkill(2221008,0,1);  //Hero's Will
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
-        }
-        else if (status == 124) 
-        {
-            cm.changeJob(MapleJob.BISHOP);
-            cm.teachSkill(2321000,0,6);//Maple Warrior
-            cm.teachSkill(2321001,0,6);//Big Bang
-            cm.teachSkill(2321002,0,6);//Mana Reflection
-            cm.teachSkill(2321003,0,6);//Bahamut
-            cm.teachSkill(2321004,0,0);//Infinity
-            cm.teachSkill(2321005,0,6);//Holy Shield
-            cm.teachSkill(2321006,0,6);//Ressurection
-            cm.teachSkill(2321007,0,6);//Angel Ray
-            cm.teachSkill(2321008,0,6);//Genesis
-            cm.teachSkill(2321009,0,1);  //Hero's Will
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
-        } 
-        else if (status == 127) 
-        {
-            cm.changeJob(MapleJob.HERO);
-            cm.teachSkill(1121000,0,6); //Maple Warrior
-            cm.teachSkill(1121001,0,6); //Monster Magnet
-            cm.teachSkill(1121002,0,6); //Power Stance
-            cm.teachSkill(1120003,0,6); //Adv Combo
-            cm.teachSkill(1120004,0,6); //Achilles
-            cm.teachSkill(1121006,0,6); //Rush
-            cm.teachSkill(1121008,0,6); //Brandish
-            cm.teachSkill(1121010,0,6); //Enrage
-            cm.teachSkill(1121011,0,1);   //Hero's Will
-			
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
-        } 
-        else if (status == 130)
-        {
-            cm.changeJob(MapleJob.PALADIN);
-            cm.teachSkill(1221000,0,6); //Maple Warrior
-            cm.teachSkill(1221001,0,6); //Monster Magnet
-            cm.teachSkill(1221002,0,6); //Power Stance
-            cm.teachSkill(1221003,19,19); //Holy Charge : Sword
-            cm.teachSkill(1221004,19,19); //Divine Charge : BW
-            cm.teachSkill(1220005,0,6); //Achilles
-            cm.teachSkill(1221007,0,6); //Rush
-            cm.teachSkill(1221009,0,6); //Blast
-            cm.teachSkill(1220010,0,6); //Adv Charge
-            cm.teachSkill(1221011,0,6); //Heaven's Hammer
-            cm.teachSkill(1221012,0,1);   //Hero's Will
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
-        } 
-        else if (status == 133)
-        {
-            cm.changeJob(MapleJob.DARKKNIGHT);
-            cm.teachSkill(1321000,0,6); //Maple Warrior
-            cm.teachSkill(1321001,0,6); //Monster Magnet
-            cm.teachSkill(1321002,0,6); //Power Stance
-            cm.teachSkill(1321003,0,6); //Rush
-            cm.teachSkill(1320005,0,6); //Achilles
-            cm.teachSkill(1320006,0,6); //Berserk
-            cm.teachSkill(1321007,0,6); //Beholder
-            cm.teachSkill(1320008,0,6); //Aura of the Beholder
-            cm.teachSkill(1320009,0,6); //Hex of the Beholder
-            cm.teachSkill(1321010,0,1);   //Hero's Will
-            cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
-            cm.dispose();
         }
     }
-}    
+}
+

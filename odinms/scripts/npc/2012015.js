@@ -41,15 +41,8 @@ function action(mode, type, selection) {
 			cm.dispose();
 		} else {
 			if (status == 1) {
-				if(cm.haveItem(4001019)) {
-					cm.gainItem(4001019, -1);
-
-					cm.warp(200080200, 0);
-					cm.dispose();
-				} else {
-					cm.sendOk("You need at least one Orbis Rock Scroll.");
-					cm.dispose();
-				}
+				cm.warp(200080200, 0);
+				cm.dispose();
 			}
 		}
 	}
