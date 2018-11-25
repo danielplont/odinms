@@ -379,118 +379,122 @@ function action(mode, type, selection)
         else if (status == 106)
         {
             cm.changeJob(MapleJob.NIGHTLORD);
-            cm.teachSkill(4121000,0,6);//Maple Warrior
-            cm.teachSkill(4121003,0,6);//Taunt
-            //cm.teachSkill(4121004,0,6);//Ninja Ambush
-            cm.teachSkill(4120005,0,6);//Venomous Star
-            cm.teachSkill(4121006,0,6);//Shadow Claw
-            //cm.teachSkill(4121007,0,6);//Triple Throw
-            //cm.teachSkill(4121008,0,6);//Ninja Storm
-            cm.teachSkill(4121009,0,1);//Hero's Will
+            //cm.teachSkill(4121000,0,30);//Maple Warrior
+            cm.teachSkill(4120002,0,30);//Shadow Shifter
+            cm.teachSkill(4121003,0,30);//Taunt
+            //cm.teachSkill(4121004,0,30);//Ninja Ambush
+            cm.teachSkill(4120005,0,30);//Venomous Star
+            cm.teachSkill(4121006,0,30);//Shadow Claw
+            cm.teachSkill(4121007,0,30);//Triple Throw
+            //cm.teachSkill(4121008,0,30);//Ninja Storm
+            cm.teachSkill(4121009,0,5);//Hero's Will
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.dispose();
         }
         else if (status == 109)
         {
             cm.changeJob(MapleJob.SHADOWER);
-            cm.teachSkill(4221000,0,6);//Maple Warrior
-            //cm.teachSkill(4221001,0,6);//Assassinate
-            //cm.teachSkill(4221003,0,6);//Taunt
-            //cm.teachSkill(4221004,0,6);//Ninja Ambush
-            cm.teachSkill(4220005,0,6);//Venomous Stab
-            cm.teachSkill(4221006,0,6);//SmokeScreen
-            cm.teachSkill(4221007,0,6);//Boomerang Step
-            cm.teachSkill(4221008,0,1);//Hero's Will
+            cm.teachSkill(4221000,0,30);//Maple Warrior
+            cm.teachSkill(4221001,0,30);//Assassinate
+            cm.teachSkill(4220002,0,30);//Shadow Shifter
+            cm.teachSkill(4221003,0,30);//Taunt
+            //cm.teachSkill(4221004,0,30);//Ninja Ambush
+            cm.teachSkill(4220005,0,30);//Venomous Stab
+            cm.teachSkill(4221006,0,30);//SmokeScreen
+            cm.teachSkill(4221007,0,30);//Boomerang Step
+            cm.teachSkill(4221008,0,5);//Hero's Will
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.dispose();
         }
         else if (status == 112)
         {
             cm.changeJob(MapleJob.BOWMASTER);
-            cm.teachSkill(3121000,0,6);//Maple Warrior
-            cm.teachSkill(3121002,0,6);//Sharp Eyes
-            //cm.teachSkill(3121003,0,6);//Dragon's Breath
-            //cm.teachSkill(3121004,0,6);//Hurricane
-            cm.teachSkill(3120005,0,6);//Bow Expert
-            cm.teachSkill(3121006,0,6);//Pheonix
-            //cm.teachSkill(3121007,0,6);//HamString
-            //cm.teachSkill(3121008,0,6);//Concentrate
-            cm.teachSkill(3121009,0,1);//Hero's Will
+            //cm.teachSkill(3121000,0,30);//Maple Warrior
+            cm.teachSkill(3121002,0,30);//Sharp Eyes
+            //cm.teachSkill(3121003,0,30);//Dragon's Breath
+            cm.teachSkill(3121004,0,30);//Hurricane
+            cm.teachSkill(3120005,0,30);//Bow Expert
+            cm.teachSkill(3121006,0,30);//Pheonix
+            cm.teachSkill(3121007,0,30);//HamString
+            cm.teachSkill(3121008,0,30);//Concentrate
+            cm.teachSkill(3121009,0,5);//Hero's Will
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.dispose();
         }
         else if (status == 115)
         {
             cm.changeJob(MapleJob.CROSSBOWMASTER);
-            cm.teachSkill(3221000,0,6);//Maple Warrior
-            //cm.teachSkill(3221001,0,6);//Piercing Arrow
-            cm.teachSkill(3221002,0,6);//Sharp Eyes
-            //cm.teachSkill(3221003,0,6);//Dragon's Breath
-            cm.teachSkill(3220004,0,6);//Marksman Boost
-            cm.teachSkill(3221005,0,6);//Frostprey
-            //cm.teachSkill(3221006,0,6);//Blind
-            cm.teachSkill(3221008,0,1);//Hero's Will
+            cm.teachSkill(3221000,0,30);//Maple Warrior
+            cm.teachSkill(3221001,0,30);//Piercing Arrow
+            cm.teachSkill(3221002,0,30);//Sharp Eyes
+            //cm.teachSkill(3221003,0,30);//Dragon's Breath
+            cm.teachSkill(3220004,0,30);//Marksman Boost
+            cm.teachSkill(3221005,0,30);//Frostprey
+            cm.teachSkill(3221006,0,30);//Blind
+            cm.teachSkill(3221007,0,30);//Snipe
+            cm.teachSkill(3221008,0,5);//Hero's Will
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.dispose();
         }
         else if (status == 118)
         {
             cm.changeJob(MapleJob.FP_ARCHMAGE);
-            cm.teachSkill(2121000,0,6);//Maple Warrior
-            //cm.teachSkill(2121001,0,6);//Big Bang
-            //cm.teachSkill(2121002,0,6);//Mana Reflection
-            cm.teachSkill(2121003,0,6);//Fire Demon
-            cm.teachSkill(2121004,0,0);//Infinity
-            cm.teachSkill(2121005,0,6);//Elquines
-            //cm.teachSkill(2121006,0,6);//Paralyze
-            //cm.teachSkill(2121007,0,6);//Meteor Shower
-            cm.teachSkill(2121008,0,1);//Hero's Will
+            //cm.teachSkill(2121000,0,30);//Maple Warrior
+            cm.teachSkill(2121001,0,30);//Big Bang
+            cm.teachSkill(2121002,0,30);//Mana Reflection
+            cm.teachSkill(2121003,0,30);//Fire Demon
+            cm.teachSkill(2121004,0,30);//Infinity
+            cm.teachSkill(2121005,0,30);//Elquines
+            cm.teachSkill(2121006,0,30);//Paralyze
+            //cm.teachSkill(2121007,0,30);//Meteor Shower
+            cm.teachSkill(2121008,0,5);//Hero's Will
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.dispose();
         }
         else if(status == 121)
         {
             cm.changeJob(MapleJob.IL_ARCHMAGE);
-            cm.teachSkill(2221000,0,6);//Maple Warrior
-            //cm.teachSkill(2221001,0,6);//Big Bang
-            //cm.teachSkill(2221002,0,6);//Mana Reflection
-            cm.teachSkill(2221003,0,6);//Ice Demon
-            cm.teachSkill(2221004,0,0);//Infinity
-            cm.teachSkill(2221005,0,6);//Ifrit
-            //cm.teachSkill(2221006,0,6);//Chain Lightning
-            //cm.teachSkill(2221007,0,6);//Blizard
-            cm.teachSkill(2221008,0,1);//Hero's Will
+            //cm.teachSkill(2221000,0,30);//Maple Warrior
+            cm.teachSkill(2221001,0,30);//Big Bang
+            cm.teachSkill(2221002,0,30);//Mana Reflection
+            cm.teachSkill(2221003,0,30);//Ice Demon
+            cm.teachSkill(2221004,0,30);//Infinity
+            cm.teachSkill(2221005,0,30);//Ifrit
+            cm.teachSkill(2221006,0,30);//Chain Lightning
+            //cm.teachSkill(2221007,0,30);//Blizard
+            cm.teachSkill(2221008,0,5);//Hero's Will
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.dispose();
         }
         else if (status == 124)
         {
             cm.changeJob(MapleJob.BISHOP);
-            cm.teachSkill(2321000,0,6);//Maple Warrior
-            //cm.teachSkill(2321001,0,6);//Big Bang
-            //cm.teachSkill(2321002,0,6);//Mana Reflection
-            cm.teachSkill(2321003,0,6);//Bahamut
-            //cm.teachSkill(2321004,0,0);//Infinity
-            cm.teachSkill(2321005,0,6);//Holy Shield
-            cm.teachSkill(2321006,0,6);//Ressurection
-            cm.teachSkill(2321007,0,6);//Angel Ray
-            //cm.teachSkill(2321008,0,6);//Genesis
-            cm.teachSkill(2321009,0,1);//Hero's Will
+            cm.teachSkill(2321000,0,30);//Maple Warrior
+            cm.teachSkill(2321001,0,30);//Big Bang
+            cm.teachSkill(2321002,0,30);//Mana Reflection
+            cm.teachSkill(2321003,0,30);//Bahamut
+            cm.teachSkill(2321004,0,30);//Infinity
+            cm.teachSkill(2321005,0,30);//Holy Shield
+            cm.teachSkill(2321006,0,10);//Ressurection
+            cm.teachSkill(2321007,0,30);//Angel Ray
+            //cm.teachSkill(2321008,0,30);//Genesis
+            cm.teachSkill(2321009,0,5);//Hero's Will
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.dispose();
         }
         else if (status == 127)
         {
             cm.changeJob(MapleJob.HERO);
-            cm.teachSkill(1121000,0,6);//Maple Warrior
-            //cm.teachSkill(1121001,0,6);//Monster Magnet
-            cm.teachSkill(1121002,0,6);//Power Stance
-            cm.teachSkill(1120003,0,6);//Adv Combo
-            //cm.teachSkill(1120004,0,6);//Achilles
-            //cm.teachSkill(1121006,0,6);//Rush
-            //cm.teachSkill(1121008,0,6);//Brandish
-            cm.teachSkill(1121010,0,6);//Enrage
-            cm.teachSkill(1121011,0,1);//Hero's Will
+            //cm.teachSkill(1121000,0,30);//Maple Warrior
+            cm.teachSkill(1121001,0,30);//Monster Magnet
+            cm.teachSkill(1121002,0,30);//Power Stance
+            cm.teachSkill(1120003,0,30);//Adv Combo
+            cm.teachSkill(1120004,0,30);//Achilles
+            //cm.teachSkill(1120005,0,30);//Guardian
+            //cm.teachSkill(1121006,0,30);//Rush
+            cm.teachSkill(1121008,0,30);//Brandish
+            cm.teachSkill(1121010,0,30);//Enrage
+            cm.teachSkill(1121011,0,5);//Hero's Will
 
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.dispose();
@@ -498,33 +502,34 @@ function action(mode, type, selection)
         else if (status == 130)
         {
             cm.changeJob(MapleJob.PALADIN);
-            cm.teachSkill(1221000,0,6);//Maple Warrior
-            //cm.teachSkill(1221001,0,6);//Monster Magnet
-            cm.teachSkill(1221002,0,6);//Power Stance
-            cm.teachSkill(1221003,19,19);//Holy Charge : Sword
-            cm.teachSkill(1221004,19,19);//Divine Charge : BW
-            //cm.teachSkill(1220005,0,6);//Achilles
-            //cm.teachSkill(1221007,0,6);//Rush
-            //cm.teachSkill(1221009,0,6);//Blast
-            cm.teachSkill(1220010,0,6);//Adv Charge
-            cm.teachSkill(1221011,0,6);//Heaven's Hammer
-            cm.teachSkill(1221012,0,1);//Hero's Will
+            cm.teachSkill(1221000,0,30);//Maple Warrior
+            cm.teachSkill(1221001,0,30);//Monster Magnet
+            cm.teachSkill(1221002,0,30);//Power Stance
+            cm.teachSkill(1221003,0,20);//Holy Charge : Sword
+            cm.teachSkill(1221004,0,20);//Divine Charge : BW
+            cm.teachSkill(1220005,0,30);//Achilles
+            //cm.teachSkill(1220006,0,30);//Guardian
+            //cm.teachSkill(1221007,0,30);//Rush
+            cm.teachSkill(1221009,0,30);//Blast
+            cm.teachSkill(1220010,0,10);//Adv Charge
+            cm.teachSkill(1221011,0,30);//Heaven's Hammer
+            cm.teachSkill(1221012,0,5);//Hero's Will
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.dispose();
         }
         else if (status == 133)
         {
             cm.changeJob(MapleJob.DARKKNIGHT);
-            cm.teachSkill(1321000,0,6);//Maple Warrior
-            //cm.teachSkill(1321001,0,6);//Monster Magnet
-            cm.teachSkill(1321002,0,6);//Power Stance
-            //cm.teachSkill(1321003,0,6);//Rush
-            //cm.teachSkill(1320005,0,6);//Achilles
-            cm.teachSkill(1320006,0,6);//Berserk
-            cm.teachSkill(1321007,0,6);//Beholder
-            cm.teachSkill(1320008,0,6);//Aura of the Beholder
-            cm.teachSkill(1320009,0,6);//Hex of the Beholder
-            cm.teachSkill(1321010,0,1);//Hero's Will
+            //cm.teachSkill(1321000,0,30);//Maple Warrior
+            cm.teachSkill(1321001,0,30);//Monster Magnet
+            cm.teachSkill(1321002,0,30);//Power Stance
+            //cm.teachSkill(1321003,0,30);//Rush
+            cm.teachSkill(1320005,0,30);//Achilles
+            cm.teachSkill(1320006,0,30);//Berserk
+            cm.teachSkill(1321007,0,10);//Beholder
+            cm.teachSkill(1320008,0,25);//Aura of the Beholder
+            cm.teachSkill(1320009,0,25);//Hex of the Beholder
+            cm.teachSkill(1321010,0,5);//Hero's Will
             cm.sendOk("You have successfully taken your 4th Job advance #b#h ##k. I provided you a full sets of skills aswell. Keep up the good work.");
             cm.sendOk("Good luck on your training.");
             cm.dispose();
