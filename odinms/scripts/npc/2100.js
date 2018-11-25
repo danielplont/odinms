@@ -34,7 +34,7 @@ function action(mode, type, selection) {
 	if (mode == 0 || wui == 1) {
 		cm.dispose();
 		cm.gainItem(1082149, 1);
-		cm.gainItem(2040807, 7);
+		cm.gainItem(2040807, 1);
 		cm.gainItem(1050018, 1);
 		cm.gainItem(1051017, 1);
 		cm.gainItem(2000005, 5000);

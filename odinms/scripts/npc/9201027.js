@@ -20,12 +20,10 @@
 */
 
 /*
-======>Costum shop Npc<======
-by Yan of HeavenlyMS
 
 */
 function start() {
-	cm.sendSimple ("Hi i am Nana of HeavenlyMS do u want to buy something ?, please choose your category.\r\n#L0#Shoes#l\r\n#L1#Bottom#l\r\n#L2#Top#l\r\n#L3#Overalls#l\r\n#L4#Gloves#l\r\n#L5#Hats#l\r\n#L6#Shields#l\r\n#L7#One-Handed Axe#l\r\n#L8#Two-Handed Axe#l\r\n#L9#One-Handed BW#l\r\n#L10#Two-Handed BW#l\r\n#L11#One-Handed Sword#l\r\n#L12#Two-Handed Sword#l\r\n#L13#Spear#l\r\n#L14#Pole Arm#l");
+	cm.sendSimple ("Hi i am Nana of odinms do u want to buy something ?, please choose your category.\r\n#L0#Shoes#l\r\n#L1#Bottom#l\r\n#L2#Top#l\r\n#L3#Overalls#l\r\n#L4#Gloves#l\r\n#L5#Hats#l\r\n#L6#Shields#l\r\n#L7#One-Handed Axe#l\r\n#L8#Two-Handed Axe#l\r\n#L9#One-Handed BW#l\r\n#L10#Two-Handed BW#l\r\n#L11#One-Handed Sword#l\r\n#L12#Two-Handed Sword#l\r\n#L13#Spear#l\r\n#L14#Pole Arm#l");
 }
 
 function action(mode, type, selection) {

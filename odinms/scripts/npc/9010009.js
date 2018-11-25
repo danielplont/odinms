@@ -1,5 +1,5 @@
 /* Duey
-   Edited by: Sean360 of RZ
+   Removed Skill maxer
 */
 
 
@@ -10,6 +10,31 @@ function start() {
 	action(1, 0, 0);
 }
 
+function action(mode, type, selection)
+{
+	if (mode == -1)
+	{
+		cm.dispose();
+	}
+	else
+	{
+		if (mode == 1)
+			status++;
+		else
+			status--;
+		if (status == 0)
+		{
+			cm.sendYesNo("Hello I am Duey");
+		}
+		else if (status == 1)
+		{
+            cm.sendOk("I'm useless but full of potential!");
+            cm.dispose();
+	    }
+	}
+}
+
+/*
 function action(mode, type, selection) {
 	if (mode == -1) {
 		cm.dispose();
@@ -288,4 +313,6 @@ function action(mode, type, selection) {
 			cm.teachSkill(4220005,30,30); //Venom
 			}
 	    }
-}	
+}
+
+*/
