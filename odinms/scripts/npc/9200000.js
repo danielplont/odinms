@@ -131,7 +131,10 @@ function action(mode, type, selection)
             }
             if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER))
             {
-                cm.sendNext("Congrats on reaching level 30! However, you must've already undergone the First Job Advancement before you can use my services.");
+                cm.sendNext("Congrats on reaching level 30! Amazing! Here's a Maroon Mop and some Pole Arm Scrolls/Mesos.");
+                cm.gainItem(2044403, 30);
+                cm.gainItem(1442023, 1);
+                cm.gainMeso(5000000);
                 cm.dispose();
             }
         }
@@ -250,7 +253,9 @@ function action(mode, type, selection)
             }
             else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER))
             {
-                cm.sendNext("Such a high level #bBeginner#k #b#h ##k! Amazing! You must love being a SuperBeginner.");
+                cm.sendNext("Such a high level #bBeginner#k #b#h ##k! Amazing! Here's some more Pole Arm Scrolls and Mesos");
+                cm.gainItem(2044403, 30);
+                cm.gainMeso(5000000);
             }
         }
         else if (status == 64)
@@ -372,7 +377,9 @@ function action(mode, type, selection)
             }
             else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER))
             {
-                cm.sendNext("Such a high level #bBeginner#k #g#h ##k Amazing! You must love being a SuperBeginner.");
+                cm.sendNext("Such a high level #bBeginner#k #g#h ##k Amazing! Here's some more Pole Arm Scrolls and Mesos.");
+                cm.gainItem(2044403, 30);
+                cm.gainMeso(5000000);
                 cm.dispose();
             }
         }

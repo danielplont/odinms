@@ -38,8 +38,12 @@ function action(mode, type, selection) {
 		cm.gainItem(1050018, 1);
 		cm.gainItem(1051017, 1);
 		cm.gainItem(1072344, 1);
+		cm.gainItem(1442012, 1);
+		cm.gainItem(1102041, 1);
+		cm.gainItem(1102042, 1);
 		cm.gainItem(2040811, 7);
 		cm.gainItem(2040815, 7);
+		cm.gainItem(2044401, 7);
 		cm.gainItem(2000005, 500);
         cm.gainMeso(5000000);
         cm.warp(104000000, 0);
