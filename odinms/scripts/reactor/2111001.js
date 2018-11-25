@@ -30,7 +30,7 @@
 
 function act() {
 	rm.closeDoor(211042300); //activate the reactor at map 211042300 this map is where the door is 
-    	rm.closePortal(211042300,"sp");//close the portal: portal name is sp  
+    rm.closePortal(211042300,"sp");//close the portal: portal name is sp
 	rm.changeMusic("Bgm06/FinalFight");
 	rm.spawnMonster(8800000);
 	rm.spawnMonster(8800003);
