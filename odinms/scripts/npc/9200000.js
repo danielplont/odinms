@@ -381,7 +381,7 @@ function action(mode, type, selection)
             cm.changeJob(MapleJob.NIGHTLORD);
             //cm.teachSkill(4121000,0,30);//Maple Warrior
             cm.teachSkill(4120002,0,30);//Shadow Shifter
-            cm.teachSkill(4121003,0,30);//Taunt
+            //cm.teachSkill(4121003,0,30);//Taunt
             //cm.teachSkill(4121004,0,30);//Ninja Ambush
             cm.teachSkill(4120005,0,30);//Venomous Star
             cm.teachSkill(4121006,0,30);//Shadow Claw
@@ -398,7 +398,7 @@ function action(mode, type, selection)
             cm.teachSkill(4221001,0,30);//Assassinate
             cm.teachSkill(4220002,0,30);//Shadow Shifter
             cm.teachSkill(4221003,0,30);//Taunt
-            //cm.teachSkill(4221004,0,30);//Ninja Ambush
+            cm.teachSkill(4221004,0,30);//Ninja Ambush
             cm.teachSkill(4220005,0,30);//Venomous Stab
             cm.teachSkill(4221006,0,30);//SmokeScreen
             cm.teachSkill(4221007,0,30);//Boomerang Step
@@ -439,7 +439,7 @@ function action(mode, type, selection)
         else if (status == 118)
         {
             cm.changeJob(MapleJob.FP_ARCHMAGE);
-            //cm.teachSkill(2121000,0,30);//Maple Warrior
+            cm.teachSkill(2121000,0,30);//Maple Warrior
             cm.teachSkill(2121001,0,30);//Big Bang
             cm.teachSkill(2121002,0,30);//Mana Reflection
             cm.teachSkill(2121003,0,30);//Fire Demon
@@ -454,7 +454,7 @@ function action(mode, type, selection)
         else if(status == 121)
         {
             cm.changeJob(MapleJob.IL_ARCHMAGE);
-            //cm.teachSkill(2221000,0,30);//Maple Warrior
+            cm.teachSkill(2221000,0,30);//Maple Warrior
             cm.teachSkill(2221001,0,30);//Big Bang
             cm.teachSkill(2221002,0,30);//Mana Reflection
             cm.teachSkill(2221003,0,30);//Ice Demon
@@ -469,7 +469,7 @@ function action(mode, type, selection)
         else if (status == 124)
         {
             cm.changeJob(MapleJob.BISHOP);
-            cm.teachSkill(2321000,0,30);//Maple Warrior
+            //cm.teachSkill(2321000,0,30);//Maple Warrior
             cm.teachSkill(2321001,0,30);//Big Bang
             cm.teachSkill(2321002,0,30);//Mana Reflection
             cm.teachSkill(2321003,0,30);//Bahamut
@@ -485,7 +485,7 @@ function action(mode, type, selection)
         else if (status == 127)
         {
             cm.changeJob(MapleJob.HERO);
-            //cm.teachSkill(1121000,0,30);//Maple Warrior
+            cm.teachSkill(1121000,0,30);//Maple Warrior
             cm.teachSkill(1121001,0,30);//Monster Magnet
             cm.teachSkill(1121002,0,30);//Power Stance
             cm.teachSkill(1120003,0,30);//Adv Combo
