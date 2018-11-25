@@ -34,12 +34,13 @@ function action(mode, type, selection) {
 	if (mode == 0 || wui == 1) {
 		cm.dispose();
 		cm.gainItem(1082149, 1);
-		cm.gainItem(2040811, 7);
-		cm.gainItem(2040814, 7);
+		cm.gainItem(1002419, 1);
 		cm.gainItem(1050018, 1);
 		cm.gainItem(1051017, 1);
+		cm.gainItem(1072344, 1);
+		cm.gainItem(2040811, 7);
+		cm.gainItem(2040815, 7);
 		cm.gainItem(2000005, 500);
-		cm.gainItem(1122001, 1);
         cm.gainMeso(5000000);
         cm.warp(104000000, 0);
 	} else {
