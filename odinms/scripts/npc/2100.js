@@ -27,20 +27,21 @@
 var wui = 0;
 
 function start() {
-	cm.sendOk ("Welcome to the test server, you will be teleported to Henesys and given a few items to start out. Cody does second & third job advancements. Fairy vendors are located in the main towns selling weapons/armor along with other customer vendors.");
+	cm.sendOk ("Welcome to the test server, you will be teleported to Lith Harbor and given a few items to start out.");
 }
 
 function action(mode, type, selection) {
 	if (mode == 0 || wui == 1) {
 		cm.dispose();
 		cm.gainItem(1082149, 1);
-		cm.gainItem(2040807, 1);
+		cm.gainItem(2040811, 7);
+		cm.gainItem(2040814, 7);
 		cm.gainItem(1050018, 1);
 		cm.gainItem(1051017, 1);
-		cm.gainItem(2000005, 5000);
+		cm.gainItem(2000005, 500);
 		cm.gainItem(1122001, 1);
-        cm.gainMeso(15000000);
-        cm.warp(100000000, 0);
+        cm.gainMeso(5000000);
+        cm.warp(104000000, 0);
 	} else {
 		wui = 1;
 		var statup = new java.util.ArrayList();
