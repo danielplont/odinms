@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<imgdir name="1052000.img">
-	<imgdir name="info">
-		<string name="info" value="&amp;#46028;&amp;#48169;&amp;#54056;:&amp;#49464;&amp;#51060;&amp;#46988;&amp;#51032;&amp;#48169;&amp;#54056;"/>
-		<string name="link" value="1050000"/>
-	</imgdir>
-	<string name="action" value="s4berserkItem0"/>
-</imgdir>

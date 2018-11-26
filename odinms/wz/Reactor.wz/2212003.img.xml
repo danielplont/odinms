@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<imgdir name="2212003.img">
-	<imgdir name="info">
-		<string name="info" value="&amp;#46020;&amp;#44260;&amp;#49828;&amp;#48372;&amp;#44256;&amp;#49436;"/>
-		<string name="link" value="2212000"/>
-	</imgdir>
-	<string name="action" value="osquest3"/>
-</imgdir>

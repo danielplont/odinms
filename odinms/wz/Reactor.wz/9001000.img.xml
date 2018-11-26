@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<imgdir name="9001000.img">
-	<imgdir name="info">
-		<string name="info" value="&amp;#49800;&amp;#54140; &amp;#51452;&amp;#45768;&amp;#50612; &amp;#45348;&amp;#53412; &amp;#54620;&amp;#47560;&amp;#47532; &amp;#52636;&amp;#54788;"/>
-		<string name="link" value="2202002"/>
-	</imgdir>
-	<string name="action" value="eventMob0"/>
-</imgdir>

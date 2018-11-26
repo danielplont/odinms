@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<imgdir name="2002015.img">
-	<imgdir name="info">
-		<string name="info" value="&amp;#48712; &amp;#50612;&amp;#46160;&amp;#50868; &amp;#49345;&amp;#51088;"/>
-		<string name="link" value="2002002"/>
-	</imgdir>
-	<string name="action" value="fgodItem14"/>
-</imgdir>
